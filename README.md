@@ -129,17 +129,8 @@ end
 endmodule
 ```
 
-### RTL LOGIC FOR FLIPFLOPS 
-
-
-
-
-
-
-
-
-
-
+## RTL LOGIC FOR FLIPFLOPS 
+![ss-1](https://user-images.githubusercontent.com/93427208/168045819-8d60ce2f-204a-4f6e-9b9b-17e5e897056d.png)
 
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
