@@ -109,7 +109,7 @@ Q(t+1)=T′Q(t)+TQ(t)′
 
 
 
-### PROGRAM 
+# PROGRAM 1 (SR) :
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by: Hariharan A
@@ -129,18 +129,89 @@ end
 endmodule
 ```
 
-## RTL LOGIC FOR FLIPFLOPS 
+## RTL LOGIC FOR FLIPFLOPS :
 ![ss-1](https://user-images.githubusercontent.com/93427208/168045819-8d60ce2f-204a-4f6e-9b9b-17e5e897056d.png)
 
 
-### TIMING DIGRAMS FOR FLIP FLOPS 
+### TIMING DIGRAMS FOR FLIP FLOPS :
 ![image](https://github.com/Hariharanashok/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120353431/205bc0c6-49d2-4af6-a2c3-d332f2eabf00)
 
 
+# Program 2 (JK) :
+
+```python
+module JKflipflop(J,K,clk,Q,Qbar);
+input J,K,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=(J&(~Q))|((~K)&Q);
+Qbar=((~J)&(Qbar))|K&(~Qbar);
+end
+endmodule
+```
+
+## RTL LOGIC FOR FLIPFLOPS :
+
+![SS-2](https://user-images.githubusercontent.com/93427208/168047690-0cfe25d6-907e-47c5-b767-324332c6ac3b.png)
+
+## TIMING DIGRAMS FOR FLIP FLOPS :
+
+![JK waveform](https://github.com/Hariharanashok/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120353431/5c1ec1ef-0cb5-472a-910a-4b525e2e3f78)
+
+# Program 3 (D) :
+
+```python
+module Dflipflop(D,clk,Q,Qbar);
+input D,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=D;
+Qbar=~D;
+end
+endmodule
+```
+
+## RTL LOGIC FOR FLIPFLOPS :
+
+![ss-3](https://user-images.githubusercontent.com/93427208/168048672-39d17f9f-d101-435a-a1f9-8b24e1ef9c24.png)
+
+## TIMING DIGRAMS FOR FLIP FLOPS :
+
+![image](https://github.com/Hariharanashok/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120353431/06788e33-8b13-4253-8c91-ef502f14d46d)
+
+# Program 3 (T) :
+
+```python
+module Tflipflop(T,clk,Q,Qbar);
+input T,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar=1;
+always @(posedge clk)
+begin
+Q=(T&(~Q))|((~T)&Q);
+Qbar=((~T)&Qbar)|(T&(~Qbar));
+end
+endmodule
+```
+
+## RTL LOGIC FOR FLIPFLOPS :
+
+![ss-4](https://user-images.githubusercontent.com/93427208/168049356-18c2deac-86e4-4fb3-9d91-0c97040e977d.png)
+
+## TIMING DIGRAMS FOR FLIP FLOPS :
+
+![image](https://github.com/Hariharanashok/Experiment--05-Implementation-of-flipflops-using-verilog/assets/120353431/12eb1220-b6df-4554-a76c-7c5a3a1a2d6f)
 
 
-
-
-
-
-### RESULTS 
+### RESULTS :
+Thus implementation of SR,JK,D and T flipflops using nand gates are completed sucessfully.
